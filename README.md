@@ -11,4 +11,4 @@ Bookshelved is a full-stack application that is a digital tracker of books for u
 
 [Wireframe](https://app.diagrams.net/)
 
-![Image](https://imgur.com/a/NsabUf6)
+![IMG_3008](https://github.com/rachcarleton-ga/Bookshelved/assets/150298824/da6d23c3-6d3e-4372-89d6-3a18060ac4b8)
