@@ -8,9 +8,12 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 router.get('/', booksCtrl.index);
 // GET /books/new
 router.get('/new', ensureLoggedIn, booksCtrl.new);
-// GET /movies/:id (show functionality) MUST be below new route
+// GET /books/:id (show functionality) MUST be below new route
 router.get('/:id', booksCtrl.show);
-// POST /movies
+// POST /books
 router.post('/', ensureLoggedIn, booksCtrl.create);
+
+router.post('/:id', booksCtrl.addReview)
 	
+
 module.exports = router;

@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/books" method="POST">
+  <label>Title:</label>
+  <input type="text" name="title">
+  <label>Author:</label>
+  <input type="text" name="author">
+  <label>Published Year:</label>
+  <input type="text" name="publishYear">
+  <label>Publishing Company:</label>
+  <input type="text" name="publishCompany">
+  <label>Genre:</label>
+  <select name="genre">
+    <option value="Romance">Romance</option>
+    <option value="Non-Fiction">Fantasy</option>
+    <option value="Mystery">Mystery</option>
+    <option value="Fantasy">Fantasy</option>
+    <option value="Thriller">Thriller</option>
+    <option value="Young Adult">Young Adult</option>
+    <option value="Children's">Children's</option>
+    <option value="Personal Growth">Personal Growth</option>
+    <option value="Poetry">Poetry</option>
+    <option value="Drama">Drama</option>
+    <option value="Classics">Classics</option>
+    <option value="Other">Other</option>
+</select>
+<label>Description:</label>
+<input type="text" name="description">
+  <input type="submit" value="Add Book">
+</form>
+
+<%- include('../partials/footer') %>

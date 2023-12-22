@@ -1,21 +1,16 @@
 const Book = require('../models/book');
-
+const User = require('../models/user')
 
 
 async function index(req, res) {
-  const books = await Book.find({});
+  const books = await Book.find();
+  console.log(books)
   res.render('books/index', { title: 'All Books', books });
 }
 
 async function show(req, res) {
-  // Populate the cast array with performer docs instead of ObjectIds
-  const book = await Book.findById(req.params.id).populate('cast');
-  // Mongoose query builder approach to retrieve performers not the movie:
-    // Performer.find({}).where('_id').nin(movie.cast)
-  // The native MongoDB approach uses a query object to find 
-  // performer docs whose _ids are not in the movie.cast array like this:
-  const performers = await Performer.find({ _id: { $nin: movie.cast } }).sort('name');
-  res.render('movies/show', { title: 'Movie Detail', movie, performers });
+  const book = await Book.findById(req.params.id)
+  res.render('books/show', { title: 'Book Detail', book });
 }
 
 function newBook(req, res) {
@@ -41,9 +36,24 @@ async function create(req, res) {
   }
 }
 
+async function addReview(req, res) {
+  const book = await Book.findById(req.params.id)
+  req.body.user = req.user._id
+  req.body.userName = req.user.name
+  req.body.userAvatar = req.user.avatar
+    book.reviews.push(req.body)
+    try {
+      await book.save()
+      res.redirect(`/books/${book._id}`)
+    } catch (err){
+      console.log(err);
+    res.render('books/', { errorMsg: err.message });
+    }
+}
 module.exports = {
     index,
     show,
     new: newBook,
-    create
+    create,
+    addReview
   };
