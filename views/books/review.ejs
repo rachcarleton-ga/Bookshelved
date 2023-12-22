@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<!-- <tr>
+<tr>
     <% let total = 0 %>
     <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
     <td><%= r.createdAt.toLocaleDateString() %></td>
@@ -14,6 +14,6 @@
     <% } %>
     </td>
 </tr>
-    <td><strong><%= (total / book.reviews.length).toFixed(1) %></strong></td> -->
+    <td><strong><%= (total / book.reviews.length).toFixed(1) %></strong></td>
 
     <%- include('../partials/footer') %>

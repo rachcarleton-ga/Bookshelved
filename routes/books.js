@@ -13,7 +13,8 @@ router.get('/:id', booksCtrl.show);
 // POST /books
 router.post('/', ensureLoggedIn, booksCtrl.create);
 
-router.post('/:id', booksCtrl.addReview)
+router.post('/:id', ensureLoggedIn, booksCtrl.addReview);
 	
+
 
 module.exports = router;
