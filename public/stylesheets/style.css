@@ -101,7 +101,7 @@ nav .navbar .menu {
   display: flex;
 }
 
-.navbar .menu li {
+.navbar .menu li a {
   list-style: none;
   font-size: 27px;
   font-weight: 600;
