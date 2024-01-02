@@ -2,21 +2,20 @@ const Book = require('../models/book');
 const User = require('../models/user')
 
 
-async function index(req, res) {
+const index = async (req, res) => {
   const books = await Book.find();
   res.render('books/index', { title: 'All Books', books });
 }
 
-async function show(req, res) {
+const show = async (req, res) => {
   const book = await Book.findById(req.params.id)
   res.render('books/show', { title: 'Book Detail', book });
 }
-
-function newBook(req, res) {
+const newBook = (req, res) => {
   res.render('books/new', { title: 'Add Book', errorMsg: '' });
 }
 
-async function create(req, res) {
+const create = async (req, res) => {
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key];
   }
@@ -28,7 +27,7 @@ async function create(req, res) {
   }
 }
 
-async function addReview(req, res) {
+const addReview = async (req, res) => {
   const book = await Book.findById(req.params.id)
   req.body.user = req.user._id
   req.body.userName = req.user.name
