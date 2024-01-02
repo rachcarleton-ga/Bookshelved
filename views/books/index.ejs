@@ -10,10 +10,10 @@
   </thead>
   <tbody>
     <% books.forEach(function(b) { %>
-      <tr class="read">
-        <td><%= b.title %></td>
-        <td><%= b.author %></td>
-        <td><a href="/books/<%= b._id %>">DETAILS</a></td>
+      <tr>
+        <td id="title"><%= b.title %></td>
+        <td id="author"><%= b.author %></td>
+        <td id="details"><a href="/books/<%= b._id %>">DETAILS</a></td>
       </tr>
       <% }); %>
     </tbody>

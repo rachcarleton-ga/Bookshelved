@@ -83,9 +83,6 @@ a {
   background-color: #C4A484;
 }
 
-#read {
-  border-radius: 30px;
-}
 
 .photo {
   max-width: 100%;
@@ -140,4 +137,18 @@ nav .navbar .menu {
 
 .navbar .menu li {
   list-style-type: none;
+}
+
+.navbar .menu li a:hover {
+  background-color: tan;
+}
+
+#title {
+min-width: 50vw !important;
+margin: 500px !important;
+}
+
+#author {
+  min-width: 30vw !important;
+  margin: 500px !important;
 }
