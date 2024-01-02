@@ -3,6 +3,7 @@
 }
 
 body {
+  margin: 8vh 0vh;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: tan;
@@ -20,6 +21,17 @@ a {
 }
 
 .login img {
+  height: 30px;
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+.logout img {
   height: 30px;
 }
 
@@ -54,27 +66,42 @@ a {
 }
 
 #list {
- 
   font-size: 20px;
-  padding: 5px;
+  padding: 1px;
   border-radius: 5px;
 }
 
 #list a {
   border-radius: 4px;
-  background-color: #B8C0C2;
   padding: 4px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
+  color: black;
 }
 
 #list a:hover {
-  background-color: white;
+  background-color: #C4A484;
+}
+
+#read {
+  border-radius: 30px;
 }
 
 .photo {
   max-width: 100%;
   max-height: 100%;
+}
+.navbar a {
+list-style-type: none;
+font-size: 27px;
+font-weight: 600;
+margin: 0 15px;
+text-decoration: none;
+color: #000000;
+}
+
+.navbar {
+list-style-type: none;
 }
 
 nav {
@@ -102,11 +129,15 @@ nav .navbar .menu {
 }
 
 .navbar .menu li a {
+  list-style-type: none;
   list-style: none;
   font-size: 27px;
   font-weight: 600;
   margin: 0 15px;
   text-decoration: none;
   color: #000000;
+}
 
+.navbar .menu li {
+  list-style-type: none;
 }
