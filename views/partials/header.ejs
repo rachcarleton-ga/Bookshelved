@@ -9,16 +9,20 @@
 </head>
 <body>
   <nav>
+    <div class="navbar">
     <!-- <img src="/images/camera.svg"> -->
     <!-- <%- title === 'All Books' ? 'class="active"' : '' %>>ALL BOOKS</a> -->
     <% if (user) { %>
     <!-- <%- title === 'Add Book' ? 'class="active"' : '' %>>ADD BOOK</a>  -->
-      <a href="/logout">LOG OUT</a>
+    <ul class="menu">
+      <li><a href="/logout">LOG OUT</a></li>
     <% } else { %>
-      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <li><a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a></li>
     <% } %>
-    <a href="/books">All Books</a>
-    <a href="/books/new">Add Book</a>
+    <li><a href="/books">All Books</a></li>
+    <li><a href="/books/new">Add Book</a></li>
+  </ul>
+  </div>
   </nav>
   <main>
     <h1><%= title %></h1>

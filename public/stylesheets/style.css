@@ -77,4 +77,36 @@ a {
   max-height: 100%;
 }
 
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 75px;
+  width: 100%;
+  background: #C4A484;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
 
+nav .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 90%;
+  background: #C4A484;
+  margin: auto;
+}
+
+nav .navbar .menu {
+  display: flex;
+}
+
+.navbar .menu li {
+  list-style: none;
+  font-size: 27px;
+  font-weight: 600;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000000;
+
+}
