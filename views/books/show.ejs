@@ -10,19 +10,18 @@
 </section>
 
 <br><br><h2>Add a review:</h2>
-<form id="add-review-form" method="POST"
-  action="/books/<%= book._id %>">
+<form id="add-review-form" method="POST"action="/books/<%= book._id %>">
   <label>Review:</label>
   <textarea name="content"></textarea>
   <label>Rating:</label>
-  <select name="rating">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5" selected>5</option>
-  </select>
-  <input type="submit" value="Add Review">
+    <select name="rating">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5" selected>5</option>
+    </select>
+    <input type="submit" value="Add Review">
 </form>
 
 <br><h2>Reviews</h2>
@@ -57,7 +56,7 @@
       <% }); %>
       <tr>
         <td colspan="3"></td>
-       <td><strong> <%= (total / book.reviews.length).toFixed(1) %> </strong></td> 
+        <td><strong> <%= (total / book.reviews.length).toFixed(1) %> </strong></td> 
       </tr>
     </tbody>
   </table>

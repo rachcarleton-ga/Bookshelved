@@ -8,15 +8,15 @@
       <th></th>
     </tr>
   </thead>
-  <tbody>
-    <% books.forEach(function(b) { %>
-      <tr>
-        <td id="title"><%= b.title %></td>
-        <td id="author"><%= b.author %></td>
-        <td id="details"><a href="/books/<%= b._id %>">DETAILS</a></td>
-      </tr>
+    <tbody>
+      <% books.forEach(function(b) { %>
+        <tr>
+          <td id="title"><%= b.title %></td>
+          <td id="author"><%= b.author %></td>
+          <td id="details"><a href="/books/<%= b._id %>">DETAILS</a></td>
+        </tr>
       <% }); %>
     </tbody>
-  </table>
+</table>
   
 <%- include('../partials/footer') %>
