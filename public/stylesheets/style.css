@@ -7,6 +7,7 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: tan;
+  background-image: "../images/pexels-ivo-rainha-1261180.jpg";
 }
 
 a {
@@ -50,6 +51,7 @@ a {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, minmax(auto, 22rem));
+  font-weight: 600;
 }
 
 #new-form *,
@@ -82,6 +84,7 @@ a {
 #list a:hover {
   background-color: #C4A484;
 }
+
 
 
 .photo {
@@ -151,4 +154,24 @@ margin: 500px !important;
 #author {
   min-width: 30vw !important;
   margin: 500px !important;
+}
+#show-page {
+  font-weight: 600;
+  font-size: 20px;
+
+
+}
+
+.banana {
+  display: flex;
+  min-width: 75vw;
+
+}
+
+.key {
+  width: 40vw;
+}
+
+.value {
+  width: 35vw;
 }

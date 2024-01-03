@@ -1,21 +1,15 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Title: </div>
-  <div><%= book.title %></div>
-  <div>Author: </div>
-  <div><%= book.author %></div>
-  <div>Published Year: </div>
-  <div><%= book.publishYear %></div>
-  <div>Publishing Company: </div>
-  <div><%= book.publishCompany %></div>
-  <div>Genre: </div>
-  <div><%= book.genre %></div>
-  <div>Description: </div>
-  <div><%= book.description %></div>
+  <div class="banana"><div class="key">Title:</div><div class="value"><%= book.title %></div></div> 
+  <div class="banana"><div class="key">Author:</div><div class="value"><%= book.author %></div></div>
+  <div class="banana"><div class="key">Published Year:</div><div class="value"><%= book.publishYear %></div></div>
+  <div class="banana"><div class="key">Publishing Company:</div><div class="value"><%= book.publishCompany %></div></div>
+  <div class="banana"><div class="key">Genre:</div><div class="value"><%= book.genre %></div></div>
+  <div class="banana"><div class="key">Description:</div><div class="value"><%= book.description %></div></div>
 </section>
 
-<br><br><h2>Reviews</h2>
+<br><br><h2>Add a review:</h2>
 <form id="add-review-form" method="POST"
   action="/books/<%= book._id %>">
   <label>Review:</label>
@@ -31,6 +25,7 @@
   <input type="submit" value="Add Review">
 </form>
 
+<br><h2>Reviews</h2>
  <% if (book.reviews.length) { %>
   <table>
     <thead>
@@ -67,7 +62,7 @@
     </tbody>
   </table>
 <% } else { %>
-  <h5>No Reviews Yet</h5>
+  <h3>No Reviews Yet</h3>
 <% } %> 
 
 <%- include('../partials/footer') %>
