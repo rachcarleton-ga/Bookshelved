@@ -174,4 +174,12 @@ margin: 500px !important;
     width: 100%;
     margin: 0;
   }
+  .navbar .menu li {
+  display: flex;
+  align-items: center;
+  }
+
+  #show-page {
+    margin-top: 35px;
+  }
 }
