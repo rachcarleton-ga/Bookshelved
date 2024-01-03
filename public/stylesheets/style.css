@@ -166,3 +166,12 @@ margin: 500px !important;
 .value {
   width: 35vw;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+    font-size: 12px;
+    width: 100%;
+    margin: 0;
+  }
+}
