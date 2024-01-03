@@ -10,10 +10,6 @@ body {
   background-image: "../images/pexels-ivo-rainha-1261180.jpg";
 }
 
-a {
-  color: #00B7FF;
-}
-
 .login {
   display: flex;
   justify-content: center;
@@ -84,8 +80,6 @@ a {
 #list a:hover {
   background-color: #C4A484;
 }
-
-
 
 .photo {
   max-width: 100%;
